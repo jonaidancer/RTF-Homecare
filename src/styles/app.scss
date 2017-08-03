@@ -1,9 +1,19 @@
-@import 'src/styles/pages/index.scss';
-@import 'src/styles/pages/contact.scss';
-@import 'src/styles/pages/aboutus.scss';
-@import 'src/styles/pages/services.scss';
-@import 'src/styles/pages/events.scss';
-@import 'src/styles/pages/layout.scss';
+$theme-primary: #662D91;
 
+@import 'skew';
+
+@import 'pages/index';
+
+.navbar {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    .navbar-brand {
+        padding: 2px 0;
+        img {
+            height: 45px;
+        }
+    }
+}
 
 

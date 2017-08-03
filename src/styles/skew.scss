@@ -1,0 +1,38 @@
+@mixin skew-me($angle, $background: green){
+    position: relative;
+    background: $background;
+    &:before {
+        z-index: -1;
+        position: absolute;
+        top: -50px;
+        height: 100px;
+        width: 100%;
+        content: ' ';
+        display: block;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        -o-text-overflow: clip;
+        text-overflow: clip;
+        -webkit-transform:    skewY($angle);
+        transform:    skewY($angle);
+        background: $background;
+    }
+    &:after {
+        z-index: -1;
+        content: ' ';
+        position: absolute;
+        bottom: -50px;
+        height: 100px;
+        display: block;
+        width: 100%;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        -o-text-overflow: clip;
+        text-overflow: clip;
+        -webkit-transform:    skewY($angle);
+        transform:    skewY($angle);
+        background: $background;
+    }
+}

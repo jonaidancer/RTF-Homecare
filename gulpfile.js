@@ -21,7 +21,7 @@ gulp.task('bs-reload', function () {
 
 
 gulp.task('styles', function(){
-  gulp.src(['src/styles/**/*.scss'])
+  gulp.src(['src/styles/app.scss'])
     .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);
