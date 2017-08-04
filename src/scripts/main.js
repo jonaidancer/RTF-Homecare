@@ -136,3 +136,6 @@
 	$(window).resize(initNice);
 
 })(jQuery);
+// #8e352e
+// #c84c44
+// #a53d36
