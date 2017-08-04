@@ -40,7 +40,7 @@ body {margin: 0;}
 
 ul.topnav {
     list-style-type: none;
-    margin: 0;
+    margin: -11;
     padding: 0;
     overflow: hidden;
     background-color: #662D91;
@@ -75,4 +75,14 @@ ul.topnav li.right {
     ul.topnav li {
         float: none;
     }
+}
+.navbar-brand{
+    background:white;
+
+}
+.navbar{
+    background:white;
+    border: none;
+    box-shadow: none;
+    height: 59px;
 }
