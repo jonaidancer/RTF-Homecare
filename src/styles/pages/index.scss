@@ -29,4 +29,10 @@
         margin: 75px 0;
         @include skew-me(3deg, $theme-primary);
     }
+    h3{
+        color: blue;
+    }
+    p{
+        font-size: 17px;
+    }
 }
