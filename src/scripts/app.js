@@ -1,38 +1,12 @@
 $(document).ready(function() {
-   // When the window has finished loading create our google map below
-    // google.maps.event.addDomListener(window, 'load', init);
-
-    // function init() {
-    //     // Basic options for a simple Google Map
-    //     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-    //     var mapOptions = {
-    //         // How zoomed in you want the map to start at (always required)
-    //         zoom: 11,
-
-    //         // The latitude and longitude to center the map (always required)
-    //         center: new google.maps.LatLng(40.6700, -73.9400), // New York
-
-    //         // How you would like to style the map. 
-    //         // This is where you would paste any style found on Snazzy Maps.
-    //         styles: [	{		featureType:"all",		elementType:"all",		stylers:[		{			invert_lightness:true		},		{			saturation:10		},		{			lightness:30		},		{			gamma:0.5		},		{			hue:"#1C705B"		}		]	}	]
-    //     };
-
-    //     // Get the HTML DOM element that will contain your map 
-    //     // We are using a div with id="map" seen below in the <body>
-    //     var mapElement = document.getElementById('map');
-
-    //     // Create the Google Map using out element and options defined above
-    //     var map = new google.maps.Map(mapElement, mapOptions);
-    // }
-    
-    // wow = new WOW({}) .init();
-
+    // IMPLEMENT CAROUSEL ON HOME PAGE
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         effect: 'coverflow',
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
+        autoplay: 2500,
         coverflow: {
             rotate: 50,
             stretch: 0,
@@ -42,3 +16,72 @@ $(document).ready(function() {
         }
     });
 });
+
+//Pop Up contact form
+
+var formContainer = $('#form-container');
+
+bindFormClick();
+//Opening the form
+function bindFormClick(){
+  $(formContainer).on('click', function(e) {
+    e.preventDefault();
+    toggleForm();
+    //Ensure container doesn't togleForm when open
+    $(this).off();
+  });
+}
+
+//Closing the form
+$('#form-close, .form-overlay').click(function(e) {
+  e.stopPropagation();
+  e.preventDefault();
+  toggleForm();
+  bindFormClick();
+});
+
+function toggleForm(){
+  $(formContainer).toggleClass('expand');
+  $(formContainer).children().toggleClass('expand');
+  $('body').toggleClass('show-form-overlay');
+  $('.form-submitted').removeClass('form-submitted');
+}
+
+//Form validation
+$('form').submit(function() {
+  var form = $(this);
+  form.find('.form-error').removeClass('form-error');
+  var formError = false;
+  
+  form.find('.input').each(function() {
+    if ($(this).val() == '') {
+      $(this).addClass('form-error');
+      $(this).select();
+      formError = true;
+      return false;
+    }
+    else if ($(this).hasClass('email') && !isValidEmail($(this).val())) {
+      $(this).addClass('form-error');
+      $(this).select();
+      formError = true;
+      return false;
+    }
+  });
+  
+  if (!formError) {
+    $('body').addClass('form-submitted');
+    $('#form-head').addClass('form-submitted'); 
+    setTimeout(function(){
+      $(form).trigger("reset");
+    }, 1000);
+  }
+  return false;
+});
+
+function isValidEmail(email) {
+    var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+    return pattern.test(email);
+};
+
+social("twitter/joeharry__", "codepen/woodwork",
+"disco");

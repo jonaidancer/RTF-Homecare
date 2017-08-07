@@ -4,6 +4,7 @@ $theme-primary: #662D91;
 @import 'pages/contactus';
 @import 'pages/index';
 @import 'pages/Events';
+@import 'pages/popupcontact';
 
 .navbar {
     background: transparent;
@@ -14,6 +15,52 @@ $theme-primary: #662D91;
         img {
             height: 45px;
         }
+    }
+    .topnav {
+        a {
+            color: $theme-primary;
+        }
+    }
+}
+
+body {margin: 0;}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul.topnav li {
+    float: left;
+    a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+}
+
+
+ul.topnav li a:hover:not(.active) {
+    background-color:#662D91 ;
+
+}
+
+ul.topnav li a.active {
+    background-color:whitesmoke ;
+}
+
+ul.topnav li.right {
+    float: right;
+}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {
+        float: none;
     }
 }
 
