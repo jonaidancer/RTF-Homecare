@@ -43,19 +43,53 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="topnav">
-          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="Events.html">Events</a></li>
           <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a class="active"href="contactus.html">Contact Us</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
   
-	
-</head>
-
 <body>
+	
+    <div class="container">
+        <form id="contactForm" name="contactForm">
+
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="firstname lastName" placeholder="Your name..">
+
+            <label for="lname">Email</label>
+            <input type="text" id="Email" name="email" placeholder="Your Email..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                <option value="France"></option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Text" style="height:200px"></textarea>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+                <span class="help-block">Thank You For Your Time</span>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Ready to send</input>
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+
+        </form>
+    </div>
+
+
 
 </body>
