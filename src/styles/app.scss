@@ -5,7 +5,7 @@ $theme-primary: #662D91;
 @import 'pages/index';
 @import 'pages/Events';
 @import 'pages/popupcontact';
-
+ b
 .navbar {
     background: transparent;
     border: none;
@@ -50,7 +50,7 @@ ul.topnav li a:hover:not(.active) {
 }
 
 ul.topnav li a.active {
-    background-color:whitesmoke ;
+    background-color:white ;
 }
 
 ul.topnav li.right {
