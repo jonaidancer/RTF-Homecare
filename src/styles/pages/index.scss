@@ -21,10 +21,6 @@
         width: 300px;
         height: 300px;
     }
-    form {
-        margin: 75px 0;
-        @include skew-me(3deg, $theme-primary);
-    }
     h3{
         color: #284b80;
     }

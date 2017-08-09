@@ -1,10 +1,12 @@
 $theme-primary: #662D91;
+$fa-font-path:   "../../fonts";
 
 @import 'skew';
 @import 'pages/contactus';
 @import 'pages/index';
 @import 'pages/Events';
 @import 'pages/popupcontact';
+@import '../../node_modules/font-awesome/scss/font-awesome';
 
 .navbar {
     background: transparent;
