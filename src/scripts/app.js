@@ -26,32 +26,25 @@ $(document).ready(function() {
         $(".contact-form-page").removeClass('show-profile');
       });
       var showed1 = false;
+      var showed2 = false;
+      var showed3 = false;      
 
       $(window).on('scroll', function(event) {
         var scrolled = $(window).scrollTop();  
-        if (scrolled >= 550 && !showed1) {
-          $('.revealOnScroll').show().addClass('slideInLeft');
+        console.log(scrolled);
+        if (scrolled >= 300 && !showed1) {
+          $('.show-1').show().addClass('slideInLeft');
           showed1 = true;
         }
+        if (scrolled >= 350 && !showed2) {
+            $('.show-2').show().addClass('slideInRight');
+            showed2 = true;
+        }
+        if (scrolled >= 400 && !showed3) {
+            $('.show-3').show().addClass('slideInLeft');
+            showed3 = true;
+        }
       });
-});
-var showed2 = false;
-
-$(window).on('scroll', function(event) {
-    var scrolled = $(window).scrollTop();  
-    if (scrolled >= 530 && !showed2) {
-        $('.revealOnScroll').show().addClass('slideInRight');
-        showed2 = true;
-    }
-});
-  var showed3 = false;
-
-$(window).on('scroll', function(event) {
-    var scrolled = $(window).scrollTop();  
-    if (scrolled >= 680 && !showed3) {
-        $('.revealOnScroll').show().addClass('slideInLeft');
-        showed3 = true;
-    }
 });
 //Pop Up contact form
 
