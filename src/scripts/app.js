@@ -114,6 +114,13 @@ function isValidEmail(email) {
 
 social("twitter/joeharry__", "codepen/woodwork",
 "disco");
-//Events 
+//CONTACT PAGE
+
+$(document).ready(function(){
+  $('.flip').click(function(){
+    $('.cont-flip').toggleClass('flipped');
+    return false;
+  });
+});
 
 	

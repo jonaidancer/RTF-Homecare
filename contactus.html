@@ -9,87 +9,66 @@
 <head>
 	<!-- BASICS -->
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>homecare responsive bootstraap template</title>
+	<title>Contact Us</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="dist/styles/app.css">
-	 <link rel="stylesheet" href="contactus.html">
-    <link rel="stylesheet" href="aboutus.html">
+	<link rel="stylesheet" href="contactus.html">
+	<link rel="stylesheet" href="aboutus.html">
 	<link rel="stylesheet" href="index.html">
+	<link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
 	<link rel="stylesheet" href="Events.html">
-	<script src="node_modules/jquery/dist/jquery.js"></script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="node_modules/jquery/dist/jquery.js"></script>
 	<script src="dist/scripts/main.js"></script>
-	
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-          aria-expanded="false">
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				 aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-        <a class="navbar-brand" href="#">
-					<img src="images/logo.png" alt="">
+				<a class="navbar-brand" href="#">
+					<img src="images/logo.png" alt=""class="animated bounce navbar-brand" style="width:300px;height:80px;>
 				</a>
-      </div>
+			</div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="topnav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Events.html">Events</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a class="active"href="contactus.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  
-<body>
-	
-    <div class="container">
-        <form id="contactForm" name="contactForm">
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="topnav">
+					<li><a href="index.html"><b>Home</b></a></li>
+					<li><a href="Events.html"><b>Events</b></a></li>
+					<li><a href="aboutus.html"><b>About Us</b></a></li>
+					<li><a class="active" href="contactus.html"><b>Contact Us</b></a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
 
-            <label for="fname">Name</label>
-            <input type="text" id="fname" name="firstname lastName" placeholder="Your name..">
+		<body>
+	<form class="form">
+  <h2>CONTACT US</h2>
+  <p type="Name:"><input placeholder="Write your name here.."></input>
+  </p>
+  <p type="Email:"><input placeholder="Let us know how to contact you back.."></input>
+  </p>
+  <p type="Message:"><input placeholder="What would you like to tell us.."></input>
+  </p>
+  <button>Send Message</button>
+  <div>
+    <span class="fa fa-phone"></span>001 1023 567
+    <span class="fa fa-envelope-o"></span> contact@company.com
+  </div>
+</form>
+		
+		</body>
 
-            <label for="lname">Email</label>
-            <input type="text" id="Email" name="email" placeholder="Your Email..">
-
-            <label for="country">Country</label>
-            <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-                <option value="France"></option>
-            </select>
-
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Text" style="height:200px"></textarea>
-            <div class="form-group">
-                <label for="exampleInputFile">File input</label>
-                <input type="file" id="exampleInputFile">
-                <span class="help-block">Thank You For Your Time</span>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox"> Ready to send</input>
-                </label>
-            </div>
-
-            <button type="submit" class="btn btn-default">Submit</button>
-
-        </form>
-    </div>
-
-
-
-</body>
+</html>
