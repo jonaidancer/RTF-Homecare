@@ -1,3 +1,8 @@
+.upcomingevents{
+  color:#662D91;
+}
+
+
 .calendar-day {
   width: 100px;
   min-width: 100px;
@@ -44,7 +49,7 @@
   border-bottom-right-radius: 4px;
 }
 .event.all-day {
-  border-top: 1px solid #284b80;
+  border-top: 1px solid #662D91;
   border-bottom: 1px solid 662D91;
   background-image: linear-gradient(to bottom, #662D91 0px, #662D91 100%);
   background-repeat: repeat-x;
@@ -62,7 +67,7 @@
   border-bottom-right-radius: 4px;
 }
 .event.clear {
-  background: none;
+  background: #662D91;
   border: 1px solid transparent;
 }
 .table-tight > thead > tr > th,
