@@ -1,5 +1,6 @@
+.page-home {
 
-.contact-form-page{
+    .contact-form-page{
                 height: 50px;
                 width: 50px;
                 display: block;
@@ -12,13 +13,13 @@
                 -moz-transition: all 0.5s;
                 -o-transition: all 0.5s;
                 transition: all 0.5s;
-                background: #284b80;
+                background: #1abc9c;
                 z-index: 9;
 
             }
 
             .show-profile{
-                background: #284b80;
+                background:#1abc9c;
                 height: 100%;
                 display: block;
                 width: 336px;
@@ -51,7 +52,7 @@
                 position: absolute;
                 top: 15px;
                 right: 15px;
-                background: #284b80;
+                background: #1abc9c;
                 color: #fff;
                 padding: 15px 0;
                 text-align: center;
@@ -73,14 +74,14 @@
                  -moz-transform: rotate(360deg);
                  -o-transform: rotate(360deg);
                  transform: rotate(360deg);
-                 background: #7EC6E7;
+                 background: #1abc9c;
                  color: #fff
             }
 
             .header-btn, .footer-btn a{
                 font-size: 20px;
                 color: #fff;
-                background: #3aa8db;
+                background: #1abc9c;
                 float: right;
             }
             .form-head{
@@ -97,7 +98,7 @@
                 position: fixed;
                 bottom: 30px;
                 right: 30px;
-                background: #3aa8db;
+                background: #1abc9c;
                 color: #fff;
                 padding: 21px;
                 text-align: center;
@@ -124,7 +125,7 @@
                 -moz-transform: rotate(360deg);
                 -o-transform: rotate(360deg);
                 transform: rotate(360deg);
-                background:lightblue;
+                background:#1abc9c;
                 color: #fff
             }
             input.form-control {
@@ -145,9 +146,9 @@
                 text-align: center;
                 display: block;
                 border-radius: 0;
-                background: #007BB5;
+                background: #1abc9c;
                 border: none;
-                border-bottom: 5px solid #005B85;
+                border-bottom: 5px solid #1abc9c;
                 text-shadow: none;
                 box-shadow: none;
                 font-size: 16px;
@@ -177,3 +178,4 @@
                 -o-transition: all 0.5s;
                 transition: all 0.5s;
             }
+}
